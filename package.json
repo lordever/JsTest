@@ -1,0 +1,17 @@
+{
+  "name": "jstest",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha test/bootstrap.js --recursive test --timeout=15000"
+  },
+  "author": "alzh0817",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "puppeteer": "^1.9.0"
+  }
+}
