@@ -17,11 +17,11 @@ let page;
 
 // expose variables
 before(function (done) {
-    server = stubServer.listen(port);
+    server = stubServer.listen(port); //запуск сервера с моками
     global.expect = expect;
 
     puppeteer
-        .launch(opts)
+        .launch(opts) //запуск браузера
         .then(function (browser) {
             global.browser = browser;
             done();
@@ -30,8 +30,8 @@ before(function (done) {
 
 // close browser and reset global variables
 after(function () {
-    browser.close();
-    server.close();
+    browser.close(); //выключение браузера
+    server.close(); //выключение сервера с моками
     global.browser = globalVariables.browser;
     global.expect = globalVariables.expect;
 });
